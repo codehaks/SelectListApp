@@ -12,16 +12,24 @@
             <th>
                 Country
             </th>
+            <th>
+
+            </th>
         </tr>
     </thead>
     <tbody>
-        <tr>
-            @foreach (var user in Model.Users)
-            {
+
+        @foreach (var user in Model.Users)
+        {
+            <tr>
                 <td>@user.Name</td>
                 <td>@user.Country</td>
-            }
+                <td>
+                    <a asp-page="/profiles/edit" asp-route-id="@user.Id" class="btn btn-primary">Edit</a>
+                </td>
+            </tr>
+        }
 
-        </tr>
+
     </tbody>
 </table>

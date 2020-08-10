@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using MyApp.Models;
 
 namespace MyApp.Data
 {
@@ -9,6 +10,8 @@ namespace MyApp.Data
         {
         }
 
+        public DbSet<User> Users { get; set; }
+        public DbSet<Country> Countries { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder builder)
